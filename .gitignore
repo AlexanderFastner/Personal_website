@@ -2,3 +2,6 @@
 data/
 #images for now
 Images/
+
+#__pycache__
+__pycache__/

@@ -19,7 +19,7 @@ About_Me_Card = dbc.Card(
                         ...\n
                         '''),
     ),
-    style={"width": "40%"},
+    style={"width": "50%"},
 )
 
 Bioinformatics_Projects_Card = dbc.Card(
@@ -28,6 +28,7 @@ Bioinformatics_Projects_Card = dbc.Card(
             html.H4("Bioinformatics Projects"),
             dbc.ListGroup(
                 [
+                    #TODO add a 1 sentence summary of what each link is
                     dcc.Link(dbc.ListGroupItem("Cantata"), href="/Cantata"),
                     dcc.Link(dbc.ListGroupItem("Rosalind challenges"), href="/Rosalind_challenges"),
                     dcc.Link(dbc.ListGroupItem("Protein embeddings to Phylogenies"), href="/Protein_embeddings_to_Phylogenies"),
@@ -44,46 +45,45 @@ Bioinformatics_Projects_Card = dbc.Card(
             #dbc.CardLink("External link", href="https://google.com"),
         ]
     ),
-    style={"width": "40%"},
+    style={"width": "50%"},
 )
 
 Data_Analysis_Card = dbc.Card(
     dbc.CardBody(
         [
-            html.H1("Data Analysis Case studies"),
-            dcc.Markdown('''
-                        Cyclistic Case Study\n
-                        ... more on the way\n 
-                        '''),
+            html.H4("Data Analysis Case studies"),
+            dbc.ListGroup(
+                dcc.Link(dbc.ListGroupItem("Cyclistic Case Study"), href="/Cyclistic_Case_Study"),
+            ),
+            dcc.Markdown('''more on the way\n '''),
         ]
     ),
-    style={"width": "40%"},
+    style={"width": "50%"},
 )
 
 Games_Card = dbc.Card(
     dbc.CardBody(
         [
-            html.H1("Games"),
-            dcc.Markdown('''
-                        Othello\n
-                        Hopefully some more when I find some time\n 
-                        '''),
+            html.H4("Games"),
+             dbc.ListGroup(
+                dcc.Link(dbc.ListGroupItem("Othello"), href="/Othello"),
+            ),
         ]
     ),
-    style={"width": "40%"},
+    style={"width": "50%"},
 )
 
 Random_Card = dbc.Card(
     dbc.CardBody(
         [
-            html.H1("Random"),
+            html.H4("Random"),
             dcc.Markdown('''
                         Arduino\n
                         Raspi\n 
                         '''),
         ]
     ),
-    style={"width": "40%"},
+    style={"width": "50%"},
 )
 
 #TODO replace this

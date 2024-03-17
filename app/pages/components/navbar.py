@@ -55,6 +55,7 @@ navbar = dbc.Navbar(
 
 #-----------------------------------------------------------
 #Callbacks
+#-----------------------------------------------------------
 # add callback for toggling the collapse on small screens
 @callback(
     Output("navbar-collapse", "is_open"),

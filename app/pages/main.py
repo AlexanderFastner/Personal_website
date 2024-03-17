@@ -28,7 +28,7 @@ Bioinformatics_Projects_Card = dbc.Card(
             html.H4("Bioinformatics Projects"),
             dbc.ListGroup(
                 [
-                    dcc.Link(dbc.ListGroupItem("Cantata frontend"), href="/Cantata_frontend"),
+                    dcc.Link(dbc.ListGroupItem("Cantata"), href="/Cantata"),
                     dcc.Link(dbc.ListGroupItem("Rosalind challenges"), href="/Rosalind_challenges"),
                     dcc.Link(dbc.ListGroupItem("Protein embeddings to Phylogenies"), href="/Protein_embeddings_to_Phylogenies"),
                     dcc.Link(dbc.ListGroupItem("DysRegNetWeb"), href="/DysRegNetWeb"),

@@ -6,6 +6,8 @@ from dash import html, callback
 from dash.dependencies import Input, Output, State
 #-----------------------------------------------------------
 
+#TODO replace this with some other cool logo
+#TODO decide on color scheme and implement in a way that it can be easily changed
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
 search_bar = dbc.Row(

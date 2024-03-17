@@ -4,6 +4,7 @@ import os
 import dash
 import dash_bootstrap_components as dbc
 from flask import Flask
+from pages.components.navbar import navbar
 #-----------------------------------------------------------
 FONT_AWESOME = (
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,7 +24,16 @@ app = dash.Dash(
 app.config.suppress_callback_exceptions = True
 #-----------------------------------------------------------
 #Layout and Navigation
-app.layout = dbc.Container()
+#TODO add Navigation
+
+app.layout = dbc.Container(
+    [
+        navbar,
+        dash.page_container,
+
+    ],
+    fluid=True,
+)
 
 #----------------------------------------------------------
 if __name__ == "__main__":

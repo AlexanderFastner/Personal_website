@@ -6,8 +6,6 @@ from dash import dcc, html, callback
 #----------------------------------------------------------
 dash.register_page(__name__, path="/")
 #-----------------------------------------------------------
-#TODO add picture to the right with email/linkedin/github links/resume
-#TODO add picture cards
 
 #-----------------------------------------------------------
 #Cards 
@@ -53,7 +51,9 @@ Data_Analysis_Card = dbc.Card(
         [
             html.H4("Data Analysis Case studies"),
             dbc.ListGroup(
+                [
                 dcc.Link(dbc.ListGroupItem("Cyclistic Case Study"), href="/Cyclistic_Case_Study"),
+                ]
             ),
             dcc.Markdown('''more on the way\n '''),
         ]
@@ -65,8 +65,10 @@ Games_Card = dbc.Card(
     dbc.CardBody(
         [
             html.H4("Games"),
-             dbc.ListGroup(
+            dbc.ListGroup(
+                [
                 dcc.Link(dbc.ListGroupItem("Othello"), href="/Othello"),
+                ]
             ),
         ]
     ),
@@ -77,27 +79,35 @@ Random_Card = dbc.Card(
     dbc.CardBody(
         [
             html.H4("Random"),
-            dcc.Markdown('''
-                        Arduino\n
-                        Raspi\n 
-                        '''),
+            dbc.ListGroup(
+                [
+                dcc.Link(dbc.ListGroupItem("Raspberry Pi"), href="/RasPi"),
+                dcc.Link(dbc.ListGroupItem("Arduino"), href="/Arduino"),
+                ]
+            ),
         ]
     ),
     style={"width": "50%"},
 )
 
-#TODO replace this
-PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
+#TODO add link to and download CV
+profile_picture = "profile_picture.png"
+print(profile_picture)
+import os
+print(os.getcwd())
 Picture_Card = dbc.Card(
     dbc.CardBody(
-        [
-            html.H1("Picture"),
-            html.Img(src=PLOTLY_LOGO, height="300px"),
+        [   
+            html.Img(src=dash.get_asset_url(profile_picture), height="600px"),
+            dbc.CardLink("Linkedin", href="https://www.linkedin.com/in/alexander-fastner/"),
+            html.Br(),
+            dbc.CardLink("Github", href="https://github.com/AlexanderFastner"),
+            html.Br(),
+            html.Plaintext("Email: alexanderfastner@gmail.com"),
         ]
-    )
+    ),
+    style={"width": "40%", "display": "flex"},
 )
-
-
 
 #-----------------------------------------------------------
 cards = html.Div(
@@ -116,18 +126,16 @@ cards = html.Div(
                     style={"width": "100%"},
                 ),
                 
-                
                 dbc.Col(
                     [
-                        #upper right is picture + links
                         dbc.Row(
                             [
                                 Picture_Card,
-                            ]
+                            ],
+                            style={"justify-content": "flex-end"},
                         )
-                        #maybe add something bottom right in the future
                     ],
-                    style={"width": "100%"},
+                    style={"width": "60%"},
                 ),
             ],
         )

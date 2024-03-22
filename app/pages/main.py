@@ -11,10 +11,21 @@ dash.register_page(__name__, path="/")
 #Cards 
 About_Me_Card = dbc.Card(
     dbc.CardBody(
+        #TODO add university logos
         dcc.Markdown('''
                         # About  Me:
-                        ...\n
-                        ...\n
+                        Brief introduction 3-4 sentences
+                        
+                        Bay area-> San Diego-> Munich -> San Diego
+                     
+                        Hobbies
+                            diving
+                            Random projects: Arduino/Raspberry Pi
+                     
+                        Education
+                        University: 
+                        TUM/LMU Bioinformatics Bachelor
+                        TUM/LMU Bioinformatics Master
                         '''),
     ),
     style={"width": "50%"},
@@ -114,6 +125,13 @@ cards = html.Div(
     [
         dbc.Row(
             [
+                #Banner
+                dbc.Col(
+                    [
+                        html.Img(src=dash.get_asset_url("DNA_graphic.png"), height="1400px"),
+                    ], width=1
+                ),
+
                 dbc.Col(
                     [
                         About_Me_Card,
@@ -123,7 +141,8 @@ cards = html.Div(
                         Random_Card,
 
                     ],
-                    style={"width": "100%"},
+                    style={"width": "100%"}
+                    #style={"width": "100%", "margin-left": "20rem"},
                 ),
                 
                 dbc.Col(

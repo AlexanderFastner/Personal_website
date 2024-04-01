@@ -101,8 +101,7 @@ Random_Card = dbc.Card(
     style={"width": "50%"},
 )
 
-#TODO add link to and download CV
-profile_picture = "profile_picture.png"
+profile_picture = "general/profile_picture.png"
 print(profile_picture)
 import os
 print(os.getcwd())
@@ -128,7 +127,7 @@ cards = html.Div(
                 #Banner
                 dbc.Col(
                     [
-                        html.Img(src=dash.get_asset_url("DNA_graphic.png"), height="1400px"),
+                        html.Img(src=dash.get_asset_url("general/DNA_graphic.png"), height="1400px"),
                     ], width=1
                 ),
 

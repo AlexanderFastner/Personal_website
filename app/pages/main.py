@@ -3,30 +3,37 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, callback
+import os
+
+print(os.getcwd())
 #----------------------------------------------------------
 dash.register_page(__name__, path="/")
 #-----------------------------------------------------------
-
+shark = "general/shark.jpg"
+profile_picture = "general/profile_picture.png"
+DNA_graphic = "general/DNA_graphic.png"
 #-----------------------------------------------------------
 #Cards 
 About_Me_Card = dbc.Card(
     dbc.CardBody(
         #TODO add university logos
-        dcc.Markdown('''
-                        # About  Me:
-                        Brief introduction 3-4 sentences
-                        
-                        Bay area-> San Diego-> Munich -> San Diego
-                     
-                        Hobbies
-                            diving
-                            Random projects: Arduino/Raspberry Pi
-                     
-                        Education
-                        University: 
-                        TUM/LMU Bioinformatics Bachelor
-                        TUM/LMU Bioinformatics Master
-                        '''),
+        dcc.Markdown(
+            '''
+            # About  Me:
+            Brief introduction 3-4 sentences
+            
+            Bay area-> San Diego-> Munich -> San Diego
+            
+            Hobbies
+                diving
+                Random projects: Arduino/Raspberry Pi
+            
+            Education
+            University: 
+            TUM/LMU Bioinformatics Bachelor
+            TUM/LMU Bioinformatics Master
+            '''),
+            html.Img(src=dash.get_asset_url(shark), height="600px", width="400px"),
     ),
     style={"width": "50%"},
 )
@@ -101,10 +108,6 @@ Random_Card = dbc.Card(
     style={"width": "50%"},
 )
 
-profile_picture = "general/profile_picture.png"
-print(profile_picture)
-import os
-print(os.getcwd())
 Picture_Card = dbc.Card(
     dbc.CardBody(
         [   
@@ -127,7 +130,7 @@ cards = html.Div(
                 #Banner
                 dbc.Col(
                     [
-                        html.Img(src=dash.get_asset_url("general/DNA_graphic.png"), height="1400px"),
+                        html.Img(src=dash.get_asset_url(DNA_graphic), height="1400px"),
                     ], width=1
                 ),
 

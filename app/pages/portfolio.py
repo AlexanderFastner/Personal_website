@@ -8,6 +8,15 @@ dash.register_page(__name__, path="/portfolio")
 #-----------------------------------------------------------
 DNA_graphic = "general/DNA_graphic.png"
 
+Intro_Card = dbc.Card(
+    dbc.CardBody(
+        [
+            html.H2("This is a collection of all the various projects I have worked on throughout the years."),
+        ]
+    )
+)
+
+
 Bioinformatics_Projects_Card = dbc.Card(
     dbc.CardBody(
         [
@@ -89,14 +98,12 @@ cards = html.Div(
     [
         dbc.Col(
             [
-                #Overview
-                #mention that its mine
+                Intro_Card,
                 Bioinformatics_Projects_Card,
                 Data_Analysis_Card,
                 Games_Card,
                 Random_Card,
             ],
-            # style={"width": "100%", "margin-left": "5rem"},
         ),
     ]
 )

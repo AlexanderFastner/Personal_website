@@ -62,14 +62,14 @@ Picture_Card = dbc.Card(
         [   
             dbc.Col(
                 [
-                html.Img(src=dash.get_asset_url(profile_picture), height="800px"),
+                html.Img(src=dash.get_asset_url(profile_picture), className="w-100"),
                 html.Br(),
                 dbc.CardLink("Linkedin", href="https://www.linkedin.com/in/alexander-fastner/"),
                 html.Br(),
                 dbc.CardLink("Github", href="https://github.com/AlexanderFastner"),
                 html.Br(),
                 html.Plaintext("Email: alexanderfastner@gmail.com"),
-                ]
+                ], style={'textAlign': 'right'}
             )
         ]
     ),
@@ -79,8 +79,8 @@ cards = html.Div(
     [
         dbc.Row(
             [
-                dbc.Col(about, width=8),
-                dbc.Col(Picture_Card, width=4),
+                dbc.Col(about, width=9),
+                dbc.Col(Picture_Card, width=3),
             ]
         )
     ]

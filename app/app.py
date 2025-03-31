@@ -7,6 +7,8 @@ import dash
 import dash_bootstrap_components as dbc
 from flask import Flask
 from pages.components.navbar import navbar
+from pages.components.footer import create_footer
+
 #-----------------------------------------------------------
 print("Starting up Personal Website!", flush=True)
 print("---------------------------------------------", flush=True)
@@ -36,7 +38,9 @@ app.layout = dbc.Container(
     [
         navbar,
         dash.page_container,
-    ],
+        create_footer(),
+    ], 
+    style={'padding-bottom': '100px'},
     fluid=True,
 )
 #----------------------------------------------------------

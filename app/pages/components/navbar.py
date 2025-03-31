@@ -32,8 +32,6 @@ navbar = dbc.Navbar(
                     [
                         dbc.NavItem(dbc.NavLink("About Me", href="/about")),
                         dbc.NavItem(dbc.NavLink("Portfolio", href="/portfolio")),
-                        # dbc.NavItem(dbc.NavLink("Resume/CV", href="/resume")),
-                        dbc.NavItem(dbc.NavLink("Contact", href="/contact")),
                     ],
                     className="ms-auto",
                     navbar=True

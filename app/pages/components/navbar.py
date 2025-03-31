@@ -6,23 +6,7 @@ from dash import html, callback
 from dash.dependencies import Input, Output, State
 #-----------------------------------------------------------
 
-#TODO replace this with some other cool logo
-#TODO decide on color scheme and implement in a way that it can be easily changed
-PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
-
-search_bar = dbc.Row(
-    [
-        dbc.Col(dbc.Input(type="search", placeholder="Search")),
-        dbc.Col(
-            dbc.Button(
-                "Search", color="primary", className="ms-2", n_clicks=0
-            ),
-            width="auto",
-        ),
-    ],
-    className="g-0 ms-auto flex-nowrap mt-3 mt-md-0",
-    align="center",
-)
+#TODO make top navivation tab bar with about me, portfolio, contact info, resume/CV, get in touch (email, linkedin)
 
 navbar = dbc.Navbar(
     dbc.Container(
@@ -31,8 +15,10 @@ navbar = dbc.Navbar(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src=PLOTLY_LOGO, height="30px")),
-                        dbc.Col(dbc.NavbarBrand("Navbar", className="ms-2")),
+                        #TODO make custom logo of some sort
+                        # dbc.Col(html.Img(src=PLOTLY_LOGO, height="30px")),
+                        #TODO adjust font and styles
+                        dbc.Col(dbc.NavbarBrand("Alexander Fastner", className="ms-2")),
                     ],
                     align="center",
                     className="g-0",
@@ -42,7 +28,16 @@ navbar = dbc.Navbar(
             ),
             dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
             dbc.Collapse(
-                search_bar,
+                dbc.Nav(
+                    [
+                        dbc.NavItem(dbc.NavLink("About Me", href="/about")),
+                        dbc.NavItem(dbc.NavLink("Portfolio", href="/portfolio")),
+                        # dbc.NavItem(dbc.NavLink("Resume/CV", href="/resume")),
+                        dbc.NavItem(dbc.NavLink("Contact", href="/contact")),
+                    ],
+                    className="ms-auto",
+                    navbar=True
+                ),
                 id="navbar-collapse",
                 is_open=False,
                 navbar=True,

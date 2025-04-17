@@ -18,7 +18,6 @@ info = html.Div(
             dbc.CardBody(
                 dcc.Markdown(
                     '''
-
                     ### CANTATA\n
 
                     **CANTATA** is a (**C**ommunity b**A**sed **N**on-bila**T**eri**A**n **T**ranscriptome **A**rchive).\n
@@ -42,19 +41,19 @@ info = html.Div(
 examples = html.Div(
     children=[
         dbc.Card([
-            dbc.CardBody(html.H5("Heatmap Example")),
+            dbc.CardHeader(html.H5("Heatmap Example")),
             dbc.CardImg(src=dash.get_asset_url(heatmap_example), className="w-100"),
         ]),
         dbc.Card([
-            dbc.CardBody(html.H5("Stacked Area Example")),
+            dbc.CardHeader(html.H5("Stacked Area Example")),
             dbc.CardImg(src=dash.get_asset_url(stacked_area_example), className="w-100"),
         ]),
         dbc.Card([
-            dbc.CardBody(html.H5("Raincloud Example")),
+            dbc.CardHeader(html.H5("Raincloud Example")),
             dbc.CardImg(src=dash.get_asset_url(raincloud_example), className="w-100"),
         ]),
         dbc.Card([
-            dbc.CardBody(html.H5("Alignment Comparison Example")),
+            dbc.CardHeader(html.H5("Alignment Comparison Example")),
             dbc.CardImg(src=dash.get_asset_url(alignment_example), className="w-100"),
         ]),
     ]

@@ -8,6 +8,8 @@ dash.register_page(__name__, path="/portfolio")
 #-----------------------------------------------------------
 DNA_graphic = "general/DNA_graphic.png"
 
+
+#TODO maybe replace with non card element - and style better!
 Intro_Card = dbc.Card(
     dbc.CardBody(
         [
@@ -17,10 +19,10 @@ Intro_Card = dbc.Card(
 )
 
 
-Bioinformatics_Projects_Card = dbc.Card(
+Bioinformatics_Projects_Card = dbc.Card([
+    dbc.CardHeader("Bioinformatics Projects"),
     dbc.CardBody(
         [
-            html.H4("Bioinformatics Projects"),
             dbc.ListGroup(
                 [
                     #TODO add a 1 sentence summary of what each link is
@@ -28,64 +30,54 @@ Bioinformatics_Projects_Card = dbc.Card(
                     dcc.Link(dbc.ListGroupItem("Rosalind challenges"), href="/Rosalind_challenges"),
                     dcc.Link(dbc.ListGroupItem("Protein embeddings to Phylogenies"), href="/Protein_embeddings_to_Phylogenies"),
                     dcc.Link(dbc.ListGroupItem("DysRegNetWeb"), href="/DysRegNetWeb"),
-                    dcc.Link(dbc.ListGroupItem("SpongeDB_v2"), href="/SpongeDB_v2"),
-                    dcc.Link(dbc.ListGroupItem("Masters Thesis"), href="/Masters_Thesis"),
+                    # dcc.Link(dbc.ListGroupItem("SpongeDB_v2"), href="/SpongeDB_v2"),
                     dcc.Link(dbc.ListGroupItem("Bachelors Thesis"), href="/Bachelors_Thesis"),
+                    dcc.Link(dbc.ListGroupItem("Masters Thesis"), href="/Masters_Thesis"),
                 ],
                 flush=True,
             ),
-            #internal link
-            #dbc.CardLink("Card link", href="#"),
-            #link to external sites
-            #dbc.CardLink("External link", href="https://google.com"),
         ]
     ),
-    style={"width": "100%"},
-)
+])
 
 Data_Analysis_Card = dbc.Card(
-    dbc.CardBody(
-        [
-            html.H4("Data Analysis Case studies"),
-            dbc.ListGroup(
-                [
+    [
+        dbc.CardHeader("Data Analysis Case studies"),
+        dbc.CardBody([
+            dbc.ListGroup([
                 dcc.Link(dbc.ListGroupItem("Cyclistic Case Study"), href="/Cyclistic_Case_Study"),
-                ]
-            ),
-            dcc.Markdown('''more on the way\n '''),
-        ]
-    ),
-    style={"width": "100%"},
+            ]),
+        ]),
+    ]
 )
 
-Games_Card = dbc.Card(
-    dbc.CardBody(
-        [
-            html.H4("Games"),
-            dbc.ListGroup(
-                [
-                dcc.Link(dbc.ListGroupItem("Othello"), href="/Othello"),
-                ]
-            ),
-        ]
-    ),
-    style={"width": "100%"},
-)
+Games_Card = dbc.Card([
+    dbc.CardHeader("Games"),
+    dbc.CardBody([
+        dbc.ListGroup(
+            [
+            dcc.Link(dbc.ListGroupItem("Othello"), href="/Othello"),
+            html.H6("Machine Strike - Coming soon"),
+            html.H6("2 Cars - Coming soon"),
+            ]
+        ),
+    ]),
+])
 
-Random_Card = dbc.Card(
-    dbc.CardBody(
-        [
-            html.H4("Random"),
-            dbc.ListGroup(
-                [
-                dcc.Link(dbc.ListGroupItem("Raspberry Pi"), href="/RasPi"),
-                dcc.Link(dbc.ListGroupItem("Arduino"), href="/Arduino"),
-                ]
-            ),
-        ]
-    ),
-    style={"width": "100%"},
-)
+Random_Card = dbc.Card([
+    dbc.CardHeader("Random"),
+    dbc.CardBody([
+        dbc.ListGroup(
+            [
+            dcc.Link(dbc.ListGroupItem("Arduino"), href="/Arduino"),
+            html.H6("Raspberry Pi - Coming soon"),
+            html.H6("3d Printing - Coming soon"),
+            # dcc.Link(dbc.ListGroupItem("Raspberry Pi"), href="/RasPi"),
+            # dcc.Link(dbc.ListGroupItem("3d Printing"), href="/RasPi"),
+            ]
+        ),
+    ]),
+])
 
 banner = dbc.Col(
     [

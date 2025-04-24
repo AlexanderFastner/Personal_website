@@ -27,11 +27,11 @@ Rosalind = html.Div(
                     [
                         dcc.Markdown(
                             """
-                            ### What is Rosalind?
+                            ## What is Rosalind?
 
                             Rosalind is a platform for learning Bioinformatics by working through a collection of problems.    [Rosalind Website](https://rosalind.info/about/)
 
-                            ## Some examples of what I have done so far
+                            # Some examples of what I have done so far
 
                             **SGRA**: Using the Spectrum Graph to Infer Peptides
                             In this challenge one must transform a list of positive real numbers corresponding to the spectrum graph of a protein seequence
@@ -41,7 +41,7 @@ Rosalind = html.Div(
                             Upon recieving a weighted newick tree return a collection of numbers that represents the distances between the nodes.
 
 
-                            ## There are many others covering topics like: 
+                            # There are many others covering topics like: 
                             - Alignment
                             - Combinatorics
                             - Computational Mass SPectrometry

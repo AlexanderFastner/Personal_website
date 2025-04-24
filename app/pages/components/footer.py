@@ -7,11 +7,6 @@ from dash import dcc, html, callback
 github = "general/github.png"
 linkedin = "general/linkedin.png"
 #-----------------------------------------------------------
-
-
-#TODO think of a design - layout for this
-#TODO add logos for linkedin and github
-
 def create_footer():
     return dbc.Container(
         dbc.Row(

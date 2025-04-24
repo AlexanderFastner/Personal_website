@@ -8,6 +8,7 @@ dash.register_page(__name__, path="/portfolio")
 #-----------------------------------------------------------
 DNA_graphic = "general/DNA_graphic.png"
 
+#TODO FINISH ALL PROJECTS
 
 #TODO maybe replace with non card element - and style better!
 Intro_Card = dbc.Card(
@@ -18,20 +19,20 @@ Intro_Card = dbc.Card(
     )
 )
 
-
 Bioinformatics_Projects_Card = dbc.Card([
-    dbc.CardHeader("Bioinformatics Projects"),
+    dbc.CardHeader(html.H4("Bioinformatics Projects")),
     dbc.CardBody(
         [
             dbc.ListGroup(
                 [
-                    #TODO add a 1 sentence summary of what each link is
+                    #TODO add a 1 sentence summary and thumbnail? of what each link is
                     dcc.Link(dbc.ListGroupItem("Cantata"), href="/Cantata"),
                     dcc.Link(dbc.ListGroupItem("Rosalind challenges"), href="/Rosalind_challenges"),
                     dcc.Link(dbc.ListGroupItem("Protein embeddings to Phylogenies"), href="/Protein_embeddings_to_Phylogenies"),
                     dcc.Link(dbc.ListGroupItem("DysRegNetWeb"), href="/DysRegNetWeb"),
                     # dcc.Link(dbc.ListGroupItem("SpongeDB_v2"), href="/SpongeDB_v2"),
                     dcc.Link(dbc.ListGroupItem("Bachelors Thesis"), href="/Bachelors_Thesis"),
+                    # TODO add NLR work and publication here!
                     dcc.Link(dbc.ListGroupItem("Masters Thesis"), href="/Masters_Thesis"),
                 ],
                 flush=True,
@@ -42,7 +43,7 @@ Bioinformatics_Projects_Card = dbc.Card([
 
 Data_Analysis_Card = dbc.Card(
     [
-        dbc.CardHeader("Data Analysis Case studies"),
+        dbc.CardHeader(html.H4("Data Analysis Case studies")),
         dbc.CardBody([
             dbc.ListGroup([
                 dcc.Link(dbc.ListGroupItem("Cyclistic Case Study"), href="/Cyclistic_Case_Study"),
@@ -52,7 +53,7 @@ Data_Analysis_Card = dbc.Card(
 )
 
 Games_Card = dbc.Card([
-    dbc.CardHeader("Games"),
+    dbc.CardHeader(html.H4("Games")),
     dbc.CardBody([
         dbc.ListGroup(
             [
@@ -65,7 +66,7 @@ Games_Card = dbc.Card([
 ])
 
 Random_Card = dbc.Card([
-    dbc.CardHeader("Random"),
+    dbc.CardHeader(html.H4("Random")),
     dbc.CardBody([
         dbc.ListGroup(
             [

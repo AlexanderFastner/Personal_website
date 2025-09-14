@@ -1,4 +1,4 @@
-name: Personal_website
+name: personal_website
 channels:
   - conda-forge
   - defaults

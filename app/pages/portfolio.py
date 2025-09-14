@@ -14,7 +14,7 @@ DNA_graphic = "general/DNA_graphic.png"
 Intro_Card = dbc.Card(
     dbc.CardBody(
         [
-            html.H2("This is a collection of all the various projects I have worked on throughout the years."),
+            html.H3("This is a collection of all the various projects I have worked on throughout the years."),
         ]
     )
 )
@@ -32,7 +32,6 @@ Bioinformatics_Projects_Card = dbc.Card([
                     dcc.Link(dbc.ListGroupItem("DysRegNetWeb"), href="/DysRegNetWeb"),
                     # dcc.Link(dbc.ListGroupItem("SpongeDB_v2"), href="/SpongeDB_v2"),
                     dcc.Link(dbc.ListGroupItem("Bachelors Thesis"), href="/Bachelors_Thesis"),
-                    # TODO add NLR work and publication here!
                     dcc.Link(dbc.ListGroupItem("Masters Thesis"), href="/Masters_Thesis"),
                 ],
                 flush=True,
@@ -57,8 +56,10 @@ Games_Card = dbc.Card([
     dbc.CardBody([
         dbc.ListGroup(
             [
-            dcc.Link(dbc.ListGroupItem("Othello"), href="/Othello"),
-            html.H6("Machine Strike - Coming soon"),
+            # dcc.Link(dbc.ListGroupItem("Othello"), href="/Othello"),
+            dcc.Link(dbc.ListGroupItem("Machine Strike"), href="/Machine_Strike"),
+            # html.H6("Machine Strike - Coming soon"),
+            html.H6("Othello - Coming soon"),
             html.H6("2 Cars - Coming soon"),
             ]
         ),

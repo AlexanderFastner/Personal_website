@@ -21,8 +21,10 @@ def create_footer():
                                 dbc.CardLink("Linkedin", href="https://www.linkedin.com/in/alexander-fastner/", style={"margin-right": "50px"}),
                                 html.Img(src=dash.get_asset_url(linkedin), height="32px", width="32px", style={"margin-right": "10px"}),
                                 dbc.CardLink("Github", href="https://github.com/AlexanderFastner"),
+                                html.Br(),
+                                html.Plaintext("Email: alexanderfastner+contact@gmail.com", style={'color': 'black', 'margin': '0', 'padding': '0'}),
                             ]),
-                            html.Plaintext("Email: alexanderfastner+contact@gmail.com", style={'color': 'black', 'margin': '0', 'padding': '0'}),
+                            
                         ], className="text-center", style={'height': 'auto', 'minHeight': '40px'}
                     )
                 ], className="bg-dark p-0 fixed-bottom")

@@ -9,7 +9,7 @@ COPY app/requirements.txt .
 RUN conda install -c conda-forge --file requirements.txt --yes
 
 COPY app/ ./app
-COPY data/ ./data
+COPY data/ ./dataq
 
 WORKDIR /wd/app/
 EXPOSE 8020
@@ -29,4 +29,10 @@ CMD gunicorn --workers=1 --threads=2 -b 0.0.0.0:$PORT app:server
 #local testing
 #docker build -t personal .
 #docker run -p 8020:8020 -e PORT=8020 personal
+#----------------------------------------------------------------
+#Host with google run
+#gcloud run deploy --source .
+#personal-website
+#Region uswest-2 --40
+#y
 #----------------------------------------------------------------

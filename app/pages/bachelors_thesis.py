@@ -17,9 +17,6 @@ row3 = html.Tr([html.Td("Nu (Mean divergence of imported DNA) "), html.Td("0.1")
 table_body = [html.Tbody([row1, row2, row3])]
 table = dbc.Table(table_header + table_body, bordered=True, color="secondary")
 #-----------------------------------------------------------
-#TODO ADD LDHELMET RESULTS
-#TODO ADD FIGURES
-
 about = html.Div([
     html.H4("Search for evidence of recombination in Alternaria solani using genomic tools"),
     custom_hr,
@@ -86,8 +83,8 @@ about = html.Div([
         """
     ),
 ])
-
-#TODO split into column  and make into images smaller and figures larger
+#-----------------------------------------------------------
+#TODO reformat this in a better way
 
 figures = html.Div([
     dbc.Row([

@@ -9,7 +9,7 @@ COPY app/requirements.txt .
 RUN conda install -c conda-forge --file requirements.txt --yes
 
 COPY app/ ./app
-COPY data/ ./dataq
+COPY data/ ./data
 
 WORKDIR /wd/app/
 EXPOSE 8020
